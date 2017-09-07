@@ -21,7 +21,7 @@ def plot_decision_region(X, Y, classifier, resolution=0.02):
     #plot class sample5
 
     for idx, cl in enumerate(np.unique(Y)):
-        plt.scatter(x=X[cl, 0], y=X[cl, 1], alpha=0.8, c=cmap(idx), marker=markers[idx], label=cl)
+        plt.scatter(x=X[Y==cl, 0], y=X[Y==cl, 1], alpha=0.8, c=cmap(idx), marker=markers[idx], label=cl)
 
 import pandas as pd
 df = pd.read_csv('iris.data', header=None)
